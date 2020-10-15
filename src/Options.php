@@ -1,6 +1,6 @@
 <?php
 
-namespace paha\BestBuyAPI;
+namespace paha\SimpleBestBuy;
 
 use \Spatie\Enum\Enum;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace paha\BestBuyAPI;
+namespace paha\SimpleBestBuy;
 
 class APIOptions{
     public string $restrictions="";

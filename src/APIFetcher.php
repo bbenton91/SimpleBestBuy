@@ -1,6 +1,6 @@
 <?php
 
-namespace paha\BestBuyAPI;
+namespace paha\SimpleBestBuy;
 
 /**
  * Simple interface to enforce the fetch and fetchAll functions

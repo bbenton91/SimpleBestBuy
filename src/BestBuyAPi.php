@@ -1,6 +1,6 @@
 <?php
 
-namespace paha\BestBuyAPI;
+namespace paha\SimpleBestBuy;
 
 use ErrorException;
 use Exception;
