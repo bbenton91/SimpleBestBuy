@@ -411,7 +411,7 @@ use \Spatie\Enum\Enum;
 *
 * There are nearly 400 options to choose from to display. Many will be an array or associateive array of values to pick from
  */
-class Options extends Enum
+class ProductOptions extends Enum
 {
     static function all(){
         return "all";

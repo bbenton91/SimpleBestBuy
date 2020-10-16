@@ -20,8 +20,8 @@ This is a simple high-level PHP client for the [Best Buy developer API](https://
 # Quickstart 
 
 ```PHP
-$options = new APIOptions(); # Options to pass into APIQueryBuilder for building a URL
-$options->restrictions = Options::salePrice()."<=29.99";
+$options = new APIOptions(); # ProductOptions to pass into APIQueryBuilder for building a URL
+$options->restrictions = ProductOptions::salePrice()."<=29.99";
 
 # The API object
 $api = new BestBuyAPI();
@@ -58,7 +58,7 @@ spatie/enum: "^3
 # Usage
 
 ### ProductOptions
-The Options class contains around 400 static properties (accessed like Options::sku()) that
+The ProductOptions class contains around 400 static properties (accessed like ProductOptions::sku()) that
 correspond to the available properties from the BestBuyAPI. These are used to show parameters
 for the returned products or to refine searches. Quick usage:
 
@@ -93,23 +93,19 @@ Contains the methods ``fetch($url)`` and ``fetchAll($url, $delay, $numAttempts)`
 
 The ``fetch($url)`` method will return an object containing ``string $error``, ``array $products``, and ``object rawData``.
 
-  -The ``$error`` is simply a string with the error message. Check ``$results->error === ""`` to validate no error.
-
-  -The ``$products`` object is an array of up to 100 returned products from the API call. Refer to the [BestBuy Products API](https://bestbuyapis.github.io/api-documentation/#products-api)
-  documentation for further information.
-
-  -The ``$rawData`` is the json object returned from the API call. This can be used to get information like total pages from the response.
-  Refer to [the response format](https://bestbuyapis.github.io/api-documentation/#response-format) for more information.
+  - *The ``$error`` is simply a string with the error message. Check ``$results->error === ""`` to validate no error.*
+  - *The ``$products`` object is an array of up to 100 returned products from the API call. Refer to the [BestBuy Products API](https://bestbuyapis.github.io/api-documentation/#products-api)
+  documentation for further information.*
+  - *The ``$rawData`` is the json object returned from the API call. This can be used to get information like total pages from the response.
+  Refer to [the response format](https://bestbuyapis.github.io/api-documentation/#response-format) for more information.*
 
 The ``fetchAll(string $url, float $delayBetweenCalls, int $numAttempts)`` will attempt to fetch all results using the cursor mark from each call.
 The $delayBetweenCalls parameter sleeps the function between each API call. Use this to prevent reaching the call per second limit.
 This differs from the regular ``fetch()`` call in the following ways:
 
-  -The ``$error`` will only contain the most recent error during the call.
-  
-  -The ``$products`` will contain as many products as the ``fetchAll()`` call gathered.
-
-  -The ``$rawData`` object will only contain the data from the most last call before finishing.
+  - *The ``$error`` will only contain the most recent error during the call.*
+  - *The ``$products`` will contain as many products as the ``fetchAll()`` call gathered.*
+  - *The ``$rawData`` object will only contain the data from the most last call before finishing.*
 
 The $url should be created from the APIQueryBuilder which will handle building and inclusion of the API key. A custom
 url can be used if desired. Quick usage:
@@ -140,3 +136,10 @@ $totalPageSize = $results->rawData->totalPages;
 ```
 
 # Roadmap
+
+- Implement availability
+- Implement categories
+- Implement open box products
+- Implement product recommendations
+- Implement products reviews
+- Implement stores
