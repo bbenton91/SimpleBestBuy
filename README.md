@@ -6,13 +6,13 @@ This is a simple high-level PHP client for the [Best Buy developer API](https://
 1. [Quickstart](#quickstart)
 2. [Introduction](#introduction)
 4. [How to Install](#how-to-install)
-  1. [Dependencies](#dependencies)
-  2. [From github](#from-github)
+    1. [Dependencies](#dependencies)
+    2. [From github](#from-github)
 5. [Usage]
-  1. [ProductOptions]
-  2. [APIOptions]
-  3. [APIQueryBuilder]
-  4. [BestBuyAPI]
+    1. [ProductOptions]
+    2. [APIOptions]
+    3. [APIQueryBuilder]
+    4. [BestBuyAPI]
 6. [Roadmap]
 
 
