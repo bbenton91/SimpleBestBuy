@@ -4,5 +4,5 @@ This is a simple high-level PHP client for the [Best Buy developer API](https://
 
 # Quickstart 
 
-<img src="./img/example_usage.png" align="right"
+<img src="./img/example_usage.svg" align="right"
      alt="Example usage of code" width="200" height="200">
